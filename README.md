@@ -1,6 +1,3 @@
-# tools-cli
-
-
 # DevAccelerate Tools CLI
 
 **DevAccelerate Tools CLI** is a console app that helps to bootstrap a new DevAccelerate-based app and seeds its database. The usage of the library is governed by the terms and conditions of its [License](https://github.com/devaccelerate/tools-cli/blob/master/LICENSE).
