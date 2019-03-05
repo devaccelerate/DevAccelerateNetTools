@@ -1,0 +1,9 @@
+INSERT INTO [Lists].[Currencies] ([Name] ,[CurrencySymbol] ,[CurrencyCode] ,[DisplayName] ,[IsActive])
+VALUES ('US Dollar', '$', 'USD', 'US Dollar', 'true')
+
+DECLARE @USDId INT
+SET @USDId = SCOPE_IDENTITY()
+
+INSERT INTO [Lists].[Countries] ([Name] ,[DialingCode] ,[CountryCode] ,[CurrencyId] ,[HasRegions] ,[IsActive])
+VALUES ('USA', '+1', 'US', @USDId, 'false', 'true')
+

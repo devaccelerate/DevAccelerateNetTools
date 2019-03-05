@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1211D38C-0361-48C0-8BCB-0DDBF0DCF5C2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ejyle.DevAccelerate.Tools.Cli</RootNamespace>
+    <AssemblyName>da</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>da.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Ejyle.DevAccelerate.Tools.Cli.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ejyle.DevAccelerate.Apps, Version=6.0.0.0, Culture=neutral, PublicKeyToken=320f45e32874cad3, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateApps.6.0.0-preview2\lib\Ejyle.DevAccelerate.Apps.dll</HintPath>
+    </Reference>
+    <Reference Include="Ejyle.DevAccelerate.Apps.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=6e7e487388003176, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateAppsEF.6.0.0-preview1\lib\Ejyle.DevAccelerate.Apps.EF.dll</HintPath>
+    </Reference>
+    <Reference Include="Ejyle.DevAccelerate.Core, Version=6.0.0.0, Culture=neutral, PublicKeyToken=fa41565678de480a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateCore.6.0.0-preview1\lib\Ejyle.DevAccelerate.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ejyle.DevAccelerate.Core.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=c08ce881703cbf8d, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateCoreEF.6.0.0-preview1\lib\Ejyle.DevAccelerate.Core.EF.dll</HintPath>
+    </Reference>
+    <Reference Include="Ejyle.DevAccelerate.Core.ExceptionHandling.Msel, Version=6.0.0.0, Culture=neutral, PublicKeyToken=85683cfaabc8a65b, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateCoreExceptionHandlingMsel.6.0.0-preview1\lib\Ejyle.DevAccelerate.Core.ExceptionHandling.Msel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ejyle.DevAccelerate.Core.Logging.Msel, Version=6.0.0.0, Culture=neutral, PublicKeyToken=2908157c6251f07a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateCoreLoggingMsel.6.0.0-preview1\lib\Ejyle.DevAccelerate.Core.Logging.Msel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ejyle.DevAccelerate.Identity.AspNet, Version=6.0.0.0, Culture=neutral, PublicKeyToken=6e10ba72f5241b59, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateIdentityAspNet.6.0.0-preview3\lib\Ejyle.DevAccelerate.Identity.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Ejyle.DevAccelerate.Identity.AspNet.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=fedcdf8886fdbd55, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateIdentityAspNetEF.6.0.0-preview3\lib\Ejyle.DevAccelerate.Identity.AspNet.EF.dll</HintPath>
+    </Reference>
+    <Reference Include="Ejyle.DevAccelerate.Lists, Version=6.0.0.0, Culture=neutral, PublicKeyToken=bb57f4f41314e69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateLists.6.0.0-preview1\lib\Ejyle.DevAccelerate.Lists.dll</HintPath>
+    </Reference>
+    <Reference Include="Ejyle.DevAccelerate.Lists.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=4e142f9f322347bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateListsEF.6.0.0-preview1\lib\Ejyle.DevAccelerate.Lists.EF.dll</HintPath>
+    </Reference>
+    <Reference Include="Ejyle.DevAccelerate.Mail, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d7b88bc0f8757726, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateMail.6.0.0-preview1\lib\Ejyle.DevAccelerate.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="Ejyle.DevAccelerate.Notifications, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5f344bbdf4971995, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateNotifications.6.0.0-preview1\lib\Ejyle.DevAccelerate.Notifications.dll</HintPath>
+    </Reference>
+    <Reference Include="Ejyle.DevAccelerate.Notifications.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=4fc17cb15538643d, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateNotificationsEF.6.0.0-preview1\lib\Ejyle.DevAccelerate.Notifications.EF.dll</HintPath>
+    </Reference>
+    <Reference Include="Ejyle.DevAccelerate.Sms, Version=6.0.0.0, Culture=neutral, PublicKeyToken=6942263d6afce94f, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateSms.6.0.0-preview2\lib\Ejyle.DevAccelerate.Sms.dll</HintPath>
+    </Reference>
+    <Reference Include="Ejyle.DevAccelerate.Subscriptions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=88f4f2f4a83006da, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateSubscriptions.6.0.0-preview1\lib\Ejyle.DevAccelerate.Subscriptions.dll</HintPath>
+    </Reference>
+    <Reference Include="Ejyle.DevAccelerate.Subscriptions.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=071d176ba3a57129, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateSubscriptionsEF.6.0.0-preview1\lib\Ejyle.DevAccelerate.Subscriptions.EF.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.ExceptionHandling.Logging.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Logging.Database.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NMoneys, Version=6.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NMoneys.6.1.0\lib\net40-client\NMoneys.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\DaCreateDefaultListsCommand.cs" />
+    <Compile Include="Commands\DaCreateFirstAppCommand.cs" />
+    <Compile Include="Commands\DaCreateGlobalSuperAdminUserCommand.cs" />
+    <Compile Include="Commands\DaCreateSubscriptionPlansCommand.cs" />
+    <Compile Include="Commands\DaCreateSystemRolesCommand.cs" />
+    <Compile Include="Commands\IDaConsoleCommand.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="da.ico" />
+    <None Include="Ejyle.DevAccelerate.Tools.Cli.snk" />
+    <None Include="packages.config" />
+    <None Include="Resources\InsertDefaultLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
