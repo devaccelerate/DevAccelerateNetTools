@@ -40,14 +40,15 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>Ejyle.DevAccelerate.Tools.Cli.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ejyle.DevAccelerate.Apps, Version=6.0.0.0, Culture=neutral, PublicKeyToken=320f45e32874cad3, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevAccelerateApps.6.0.0-preview2\lib\Ejyle.DevAccelerate.Apps.dll</HintPath>
+      <HintPath>..\packages\DevAccelerateApps.6.0.0-preview4\lib\Ejyle.DevAccelerate.Apps.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Apps.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=6e7e487388003176, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevAccelerateAppsEF.6.0.0-preview1\lib\Ejyle.DevAccelerate.Apps.EF.dll</HintPath>
+      <HintPath>..\packages\DevAccelerateAppsEF.6.0.0-preview3\lib\Ejyle.DevAccelerate.Apps.EF.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Core, Version=6.0.0.0, Culture=neutral, PublicKeyToken=fa41565678de480a, processorArchitecture=MSIL">
       <HintPath>..\packages\DevAccelerateCore.6.0.0-preview1\lib\Ejyle.DevAccelerate.Core.dll</HintPath>
@@ -62,10 +63,10 @@
       <HintPath>..\packages\DevAccelerateCoreLoggingMsel.6.0.0-preview1\lib\Ejyle.DevAccelerate.Core.Logging.Msel.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Identity.AspNet, Version=6.0.0.0, Culture=neutral, PublicKeyToken=6e10ba72f5241b59, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevAccelerateIdentityAspNet.6.0.0-preview3\lib\Ejyle.DevAccelerate.Identity.AspNet.dll</HintPath>
+      <HintPath>..\packages\DevAccelerateIdentityAspNet.6.0.0-preview4\lib\Ejyle.DevAccelerate.Identity.AspNet.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Identity.AspNet.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=fedcdf8886fdbd55, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevAccelerateIdentityAspNetEF.6.0.0-preview3\lib\Ejyle.DevAccelerate.Identity.AspNet.EF.dll</HintPath>
+      <HintPath>..\packages\DevAccelerateIdentityAspNetEF.6.0.0-preview4\lib\Ejyle.DevAccelerate.Identity.AspNet.EF.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Lists, Version=6.0.0.0, Culture=neutral, PublicKeyToken=bb57f4f41314e69f, processorArchitecture=MSIL">
       <HintPath>..\packages\DevAccelerateLists.6.0.0-preview1\lib\Ejyle.DevAccelerate.Lists.dll</HintPath>
@@ -82,8 +83,8 @@
     <Reference Include="Ejyle.DevAccelerate.Notifications.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=4fc17cb15538643d, processorArchitecture=MSIL">
       <HintPath>..\packages\DevAccelerateNotificationsEF.6.0.0-preview1\lib\Ejyle.DevAccelerate.Notifications.EF.dll</HintPath>
     </Reference>
-    <Reference Include="Ejyle.DevAccelerate.Sms, Version=6.0.0.0, Culture=neutral, PublicKeyToken=6942263d6afce94f, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevAccelerateSms.6.0.0-preview2\lib\Ejyle.DevAccelerate.Sms.dll</HintPath>
+    <Reference Include="Ejyle.DevAccelerate.Sms, Version=6.0.0.1, Culture=neutral, PublicKeyToken=6942263d6afce94f, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevAccelerateSms.6.0.0-preview4\lib\Ejyle.DevAccelerate.Sms.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Subscriptions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=88f4f2f4a83006da, processorArchitecture=MSIL">
       <HintPath>..\packages\DevAccelerateSubscriptions.6.0.0-preview1\lib\Ejyle.DevAccelerate.Subscriptions.dll</HintPath>
@@ -178,7 +179,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="da.ico" />
-    <None Include="Ejyle.DevAccelerate.Tools.Cli.snk" />
     <None Include="packages.config" />
     <None Include="Resources\InsertDefaultLists.txt" />
   </ItemGroup>
