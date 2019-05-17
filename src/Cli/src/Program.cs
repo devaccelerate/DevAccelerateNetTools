@@ -6,11 +6,11 @@
 // ----------------------------------------------------------------------------------------------------------------------
 
 using System;
-using Ejyle.DevAccelerate.Apps;
 using Ejyle.DevAccelerate.Core;
 using Ejyle.DevAccelerate.Core.Configuration;
 using Ejyle.DevAccelerate.Core.Data;
-using Ejyle.DevAccelerate.Identity.AspNet;
+using Ejyle.DevAccelerate.EnterpriseSecurity.Apps;
+using Ejyle.DevAccelerate.Identity;
 using Ejyle.DevAccelerate.Tools.Cli.Commands;
 
 namespace Ejyle.DevAccelerate.Tools.Cli
@@ -38,6 +38,9 @@ namespace Ejyle.DevAccelerate.Tools.Cli
                 new DaCreateFirstAppCommand().Execute();
                 new DaCreateDefaultListsCommand().Execute();
                 new DaCreateSubscriptionPlansCommand().Execute();
+
+                Console.WriteLine("Press any key to exit...");
+                Console.ReadKey();
             }
             catch (Exception ex)
             {

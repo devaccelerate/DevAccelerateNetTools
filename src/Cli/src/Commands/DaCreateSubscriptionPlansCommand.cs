@@ -5,8 +5,8 @@
 // Licensed under the MIT license. See the LICENSE file in the project's root directory for complete license information.
 // ----------------------------------------------------------------------------------------------------------------------
 
-using Ejyle.DevAccelerate.Subscriptions;
-using Ejyle.DevAccelerate.Subscriptions.EF;
+using Ejyle.DevAccelerate.EnterpriseSecurity.EF;
+using Ejyle.DevAccelerate.EnterpriseSecurity.EF.SubscriptionPlans;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +19,7 @@ namespace Ejyle.DevAccelerate.Tools.Cli.Commands
     {
         public void Execute()
         {
-            var subscriptionPlanManager = new DaSubscriptionPlanManager(new DaSubscriptionPlanRepository(new DaSubscriptionsDbContext()));
+            var subscriptionPlanManager = new DaSubscriptionPlanManager(new DaSubscriptionPlanRepository(new DaEnterpriseSecurityDbContext()));
 
             var sps = subscriptionPlanManager.FindAll();
 

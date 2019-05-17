@@ -6,7 +6,7 @@
 // ----------------------------------------------------------------------------------------------------------------------
 
 using Ejyle.DevAccelerate.Core;
-using Ejyle.DevAccelerate.Identity.AspNet.EF;
+using Ejyle.DevAccelerate.Identity.EF;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -22,7 +22,7 @@ namespace Ejyle.DevAccelerate.Tools.Cli.Commands
         {
             IdentityResult result = null;
 
-            var userManager = new DaUserManager(new DaUserRepository(new DaAspNetIdentityDbContext()));
+            var userManager = new DaUserManager(new DaUserRepository(new DaIdentityDbContext()));
 
             var user = DaAsyncHelper.RunSync<DaUser>(() => userManager.FindByNameAsync(DaUser.GLOBAL_SUPER_ADMIN));
 

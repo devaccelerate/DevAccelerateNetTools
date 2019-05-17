@@ -6,7 +6,7 @@
 // ----------------------------------------------------------------------------------------------------------------------
 
 using Ejyle.DevAccelerate.Core;
-using Ejyle.DevAccelerate.Identity.AspNet.EF;
+using Ejyle.DevAccelerate.Identity.EF;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -22,7 +22,7 @@ namespace Ejyle.DevAccelerate.Tools.Cli.Commands
         {
             string[] systemRoles = { DaRole.GLOBAL_SUPER_ADMIN, DaRole.TENANT_SUPER_ADMIN, DaRole.USER };
 
-            var roleManager = new DaRoleManager(new DaRoleRepository(new DaAspNetIdentityDbContext()));
+            var roleManager = new DaRoleManager(new DaRoleRepository(new DaIdentityDbContext()));
             DaRole role = null;
 
             foreach (var systemRole in systemRoles)

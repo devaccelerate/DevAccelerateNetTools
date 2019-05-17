@@ -5,13 +5,14 @@
 // Licensed under the MIT license. See the LICENSE file in the project's root directory for complete license information.
 // ----------------------------------------------------------------------------------------------------------------------
 
-using Ejyle.DevAccelerate.Apps;
-using Ejyle.DevAccelerate.Apps.EF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ejyle.DevAccelerate.EnterpriseSecurity.Apps;
+using Ejyle.DevAccelerate.EnterpriseSecurity.EF;
+using Ejyle.DevAccelerate.EnterpriseSecurity.EF.Apps;
 
 namespace Ejyle.DevAccelerate.Tools.Cli.Commands
 {
@@ -19,7 +20,7 @@ namespace Ejyle.DevAccelerate.Tools.Cli.Commands
     {
         public void Execute()
         {
-            var appManager = new DaAppProfileManager(new DaAppProfileRepository(new DaAppsDbContext()));
+            var appManager = new DaAppManager(new DaAppRepository(new DaEnterpriseSecurityDbContext()));
 
             var apps = appManager.FindAll();
 
@@ -28,7 +29,7 @@ namespace Ejyle.DevAccelerate.Tools.Cli.Commands
                 Console.Write("Enter the name of your first app: ");
                 var firstAppName = Console.ReadLine();
 
-                var app = new DaAppProfile();
+                var app = new DaApp();
                 app.Name = firstAppName;
                 app.Key = firstAppName;
 
