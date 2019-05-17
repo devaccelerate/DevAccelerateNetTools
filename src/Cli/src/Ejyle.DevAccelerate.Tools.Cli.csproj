@@ -66,7 +66,7 @@
       <HintPath>..\..\packages\DevAccelerateIdentity.6.0.0-preview1\lib\Ejyle.DevAccelerate.Identity.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Identity.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=fedcdf8886fdbd55, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DevAccelerateIdentityEF.6.0.0-preview1\lib\Ejyle.DevAccelerate.Identity.EF.dll</HintPath>
+      <HintPath>..\..\packages\DevAccelerateIdentityEF.6.0.0-preview2\lib\Ejyle.DevAccelerate.Identity.EF.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Lists, Version=6.0.0.0, Culture=neutral, PublicKeyToken=bb57f4f41314e69f, processorArchitecture=MSIL">
       <HintPath>..\..\packages\DevAccelerateNotifications.6.0.0-preview2\lib\Ejyle.DevAccelerate.Lists.dll</HintPath>
