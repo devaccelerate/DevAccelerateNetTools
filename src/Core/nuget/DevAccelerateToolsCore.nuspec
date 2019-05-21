@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>DevAccelerateToolsCore</id>
+    <version>1.0.0-preview1</version>
+    <title>DevAccelerate Tools Core</title>
+    <authors>ejyle,tanveery</authors>
+    <owners>ejyle,tanveery</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://raw.githubusercontent.com/devaccelerate/DevAccelerateNetTools/master/LICENSE</licenseUrl>
+    <projectUrl>https://devaccelerate.github.io/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/devaccelerate/devaccelerate.github.io/master/img/logo.png</iconUrl>
+    <description>A core library to support the DevAccelerate tools.</description>
+    <summary>A core library to support the DevAccelerate tools.</summary>
+    <releaseNotes>Moved all the commands to this package from the Cli project.</releaseNotes>
+    <copyright>© Ejyle Technologies (P) Ltd. All rights reserved.</copyright>
+    <language>en-US</language>
+    <tags>DevAccelerate, Tools</tags>
+    <repository type="git" url="https://github.com/devaccelerate/DevAccelerateNetTools" commit="7a78bfc031d33bd3a3bf65bc116b0c11f01c72f0" />
+    <dependencies>
+      <dependency id="DevAccelerateIdentityEF" version="6.0.0-preview2" />
+      <dependency id="DevAccelerateEnterpriseSecurityEF" version="6.0.0-preview1" />
+      <dependency id="DevAccelerateListsEF" version="6.0.0-preview2" />
+      <dependency id="DevAccelerateNotificationsEF" version="6.0.0-preview2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="lib\Ejyle.DevAccelerate.Tools.Core.dll" target="lib\Ejyle.DevAccelerate.Tools.Core.dll" />
+  </files>
+</package>
