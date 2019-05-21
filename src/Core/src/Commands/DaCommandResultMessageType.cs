@@ -11,10 +11,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejyle.DevAccelerate.Tools.Cli.Commands
+namespace Ejyle.DevAccelerate.Tools.Core.Commands
 {
-    public interface IDaConsoleCommand
+    public enum DaCommandResultMessageType
     {
-        void Execute();
+        Success = 0,
+        Info = 1,
+        Warning = 2,
+        Error = 3,
+        Disaster = 4
     }
 }

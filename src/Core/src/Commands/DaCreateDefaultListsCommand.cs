@@ -13,11 +13,11 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
-namespace Ejyle.DevAccelerate.Tools.Cli.Commands
+namespace Ejyle.DevAccelerate.Tools.Core.Commands
 {
-    public class DaCreateDefaultListsCommand : IDaConsoleCommand
+    public class DaCreateDefaultListsCommand : IDaCommand
     {
-        public void Execute()
+        public DaCommandResult Execute()
         {
             using (var context = new DaListsDbContext())
             {
@@ -110,6 +110,8 @@ namespace Ejyle.DevAccelerate.Tools.Cli.Commands
                     }
                 }
             }
+
+            return new DaCommandResult(true, null);
         }
 
         private IEnumerable<DaCountry> GetCountries()

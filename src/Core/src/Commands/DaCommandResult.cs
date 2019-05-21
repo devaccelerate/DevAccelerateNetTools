@@ -5,28 +5,23 @@
 // Licensed under the MIT license. See the LICENSE file in the project's root directory for complete license information.
 // ----------------------------------------------------------------------------------------------------------------------
 
-using Ejyle.DevAccelerate.EnterpriseSecurity.EF;
-using Ejyle.DevAccelerate.EnterpriseSecurity.EF.SubscriptionPlans;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejyle.DevAccelerate.Tools.Cli.Commands
+namespace Ejyle.DevAccelerate.Tools.Core.Commands
 {
-    public class DaCreateSubscriptionPlansCommand : IDaConsoleCommand
+    public class DaCommandResult
     {
-        public void Execute()
+        public DaCommandResult(bool success, List<DaCommandResultMessage> messages)
         {
-            var subscriptionPlanManager = new DaSubscriptionPlanManager(new DaSubscriptionPlanRepository(new DaEnterpriseSecurityDbContext()));
-
-            var sps = subscriptionPlanManager.FindAll();
-
-            if (sps == null || sps.Count <= 0)
-            {
-                Console.Write($"{sps.Count} subscription plans exist.");
-            }
+            Success = success;
+            Messages = messages;
         }
+
+        public bool Success { get; private set; }
+        public List<DaCommandResultMessage> Messages { get; private set; }
     }
 }

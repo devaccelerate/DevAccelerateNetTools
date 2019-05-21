@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Ejyle.DevAccelerate.Tools.Cli")]
-[assembly: AssemblyDescription("DevAccelerate command-line interface")]
+[assembly: AssemblyTitle("Ejyle.DevAccelerate.Tools.Core")]
+[assembly: AssemblyDescription("A core library to support the DevAccelerate tools.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Ejyle Technologies (P) Ltd")]
-[assembly: AssemblyProduct("DevAccelerate CLI")]
+[assembly: AssemblyProduct("Ejyle.DevAccelerate.Tools.Core")]
 [assembly: AssemblyCopyright("Copyright © Ejyle Technologies (P) Ltd. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1211d38c-0361-48c0-8bcb-0ddbf0dcf5c2")]
+[assembly: Guid("2c7435aa-47cb-48a9-89ab-372269b68b1f")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -14,12 +14,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejyle.DevAccelerate.Tools.Cli.Commands
+namespace Ejyle.DevAccelerate.Tools.Core.Commands
 {
-    public class DaCreateGlobalSuperAdminUserCommand : IDaConsoleCommand
+    public class DaCreateGlobalSuperAdminUserCommand : IDaCommand
     {
-        public void Execute()
+        public DaCreateGlobalSuperAdminUserCommand()
+        { }
+
+        public DaCreateGlobalSuperAdminUserCommand(string email, string password)
         {
+            if(string.IsNullOrEmpty(email))
+            {
+                throw new ArgumentNullException(nameof(email));
+            }
+
+            if(string.IsNullOrEmpty(password))
+            {
+                throw new ArgumentNullException(nameof(password));
+            }
+
+            Email = email;
+            Password = password;
+        }
+
+        public DaCommandResult Execute()
+        {
+            bool success = false;
+            List<DaCommandResultMessage> messages = new List<DaCommandResultMessage>();
+
             IdentityResult result = null;
 
             var userManager = new DaUserManager(new DaUserRepository(new DaIdentityDbContext()));
@@ -28,31 +50,43 @@ namespace Ejyle.DevAccelerate.Tools.Cli.Commands
 
             if (user == null)
             {
-                Console.Write($"{DaUser.GLOBAL_SUPER_ADMIN} email address: ");
-                string email = Console.ReadLine();
-
-                Console.Write($"{DaUser.GLOBAL_SUPER_ADMIN} password: ");
-                string password = Console.ReadLine();
-
                 user = new DaUser();
                 user.UserName = DaUser.GLOBAL_SUPER_ADMIN;
-                user.Email = email;
+                user.Email = Email;
 
-                result = userManager.Create(user, password);
+                result = userManager.Create(user, Password);
+                success = result.Succeeded;
 
                 if (result.Succeeded)
                 {
-                    Console.WriteLine($"Successfully created the {DaUser.GLOBAL_SUPER_ADMIN} account.");
+                    messages.Add(new DaCommandResultMessage(DaCommandResultMessageType.Info, $"Successfully created the {DaUser.GLOBAL_SUPER_ADMIN} account."));
                     result = DaAsyncHelper.RunSync<IdentityResult>(() => userManager.AddToRoleAsync(user.Id, DaRole.GLOBAL_SUPER_ADMIN));
                 }
                 else
                 {
                     if(result.Errors != null && result.Errors.Count() > 0)
                     {
-                        throw new Exception(result.Errors.FirstOrDefault());
+                        foreach(var err in result.Errors)
+                        {
+                            messages.Add(new DaCommandResultMessage(DaCommandResultMessageType.Error, err));
+                        }
                     }
                 }
             }
+
+            return new DaCommandResult(success, messages);
+        }
+
+        public string Email
+        {
+            get;
+            private set;
+        }
+
+        public string Password
+        {
+            get;
+            private set;
         }
     }
 }

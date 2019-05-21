@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ejyle.DevAccelerate.Tools.Cli.Properties {
+namespace Ejyle.DevAccelerate.Tools.Core.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Ejyle.DevAccelerate.Tools.Cli.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Ejyle.DevAccelerate.Tools.Cli.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Ejyle.DevAccelerate.Tools.Core.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -72,9 +72,9 @@ namespace Ejyle.DevAccelerate.Tools.Cli.Properties {
         ///
         ///.
         /// </summary>
-        internal static string InsertDefaultCultureLists {
+        internal static string InsertDefaultLists {
             get {
-                return ResourceManager.GetString("InsertDefaultCultureLists", resourceCulture);
+                return ResourceManager.GetString("InsertDefaultLists", resourceCulture);
             }
         }
     }

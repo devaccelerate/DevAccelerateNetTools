@@ -14,27 +14,40 @@ using Ejyle.DevAccelerate.EnterpriseSecurity.Apps;
 using Ejyle.DevAccelerate.EnterpriseSecurity.EF;
 using Ejyle.DevAccelerate.EnterpriseSecurity.EF.Apps;
 
-namespace Ejyle.DevAccelerate.Tools.Cli.Commands
+namespace Ejyle.DevAccelerate.Tools.Core.Commands
 {
-    public class DaCreateFirstAppCommand : IDaConsoleCommand
+    public class DaCreateAppCommand : IDaCommand
     {
-        public void Execute()
+        public DaCreateAppCommand()
+        { }
+
+        public DaCreateAppCommand(string appName)
+        {
+            if(string.IsNullOrEmpty(appName))
+            {
+                throw new ArgumentNullException(nameof(appName));
+            }
+
+            AppName = appName;
+        }
+
+        public DaCommandResult Execute()
         {
             var appManager = new DaAppManager(new DaAppRepository(new DaEnterpriseSecurityDbContext()));
 
-            var apps = appManager.FindAll();
+            var app = new DaApp();
+            app.Name = AppName;
+            app.Key = AppName;
 
-            if (apps == null || apps.Count <= 0)
-            {
-                Console.Write("Enter the name of your first app: ");
-                var firstAppName = Console.ReadLine();
+            appManager.Create(app);
 
-                var app = new DaApp();
-                app.Name = firstAppName;
-                app.Key = firstAppName;
+            return new DaCommandResult(true, null);
+        }
 
-                appManager.Create(app);
-            }
+        public string AppName
+        {
+            get;
+            private set;
         }
     }
 }

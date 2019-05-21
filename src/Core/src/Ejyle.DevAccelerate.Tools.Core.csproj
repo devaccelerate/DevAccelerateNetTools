@@ -4,18 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1211D38C-0361-48C0-8BCB-0DDBF0DCF5C2}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Ejyle.DevAccelerate.Tools.Cli</RootNamespace>
-    <AssemblyName>da</AssemblyName>
+    <ProjectGuid>{2C7435AA-47CB-48A9-89AB-372269B68B1F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ejyle.DevAccelerate.Tools.Core</RootNamespace>
+    <AssemblyName>Ejyle.DevAccelerate.Tools.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -37,7 +34,7 @@
     <ApplicationIcon>da.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>
@@ -130,7 +127,6 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Caching" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -139,21 +135,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Commands\DaCommandResult.cs" />
+    <Compile Include="Commands\DaCommandResultMessage.cs" />
+    <Compile Include="Commands\DaCommandResultMessageType.cs" />
+    <Compile Include="Commands\DaCreateAppCommand.cs" />
+    <Compile Include="Commands\DaCreateDefaultListsCommand.cs" />
+    <Compile Include="Commands\DaCreateGlobalSuperAdminUserCommand.cs" />
+    <Compile Include="Commands\DaCreateSubscriptionPlansCommand.cs" />
+    <Compile Include="Commands\DaCreateSystemRolesCommand.cs" />
+    <Compile Include="Commands\IDaCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="da.ico" />
+    <None Include="App.config" />
+    <None Include="Resources\InsertDefaultLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\src\Ejyle.DevAccelerate.Tools.Core.csproj">
-      <Project>{2c7435aa-47cb-48a9-89ab-372269b68b1f}</Project>
-      <Name>Ejyle.DevAccelerate.Tools.Core</Name>
-    </ProjectReference>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

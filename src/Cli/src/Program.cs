@@ -6,12 +6,14 @@
 // ----------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections;
 using Ejyle.DevAccelerate.Core;
 using Ejyle.DevAccelerate.Core.Configuration;
 using Ejyle.DevAccelerate.Core.Data;
 using Ejyle.DevAccelerate.EnterpriseSecurity.Apps;
 using Ejyle.DevAccelerate.Identity;
-using Ejyle.DevAccelerate.Tools.Cli.Commands;
+using Ejyle.DevAccelerate.Identity.EF;
+using Ejyle.DevAccelerate.Tools.Core.Commands;
 
 namespace Ejyle.DevAccelerate.Tools.Cli
 {
@@ -33,11 +35,36 @@ namespace Ejyle.DevAccelerate.Tools.Cli
 
                 Console.WriteLine("Initialization successful!");
 
-                new DaCreateSystemRolesCommand().Execute();
-                new DaCreateGlobalSuperAdminUserCommand().Execute();
-                new DaCreateFirstAppCommand().Execute();
-                new DaCreateDefaultListsCommand().Execute();
-                new DaCreateSubscriptionPlansCommand().Execute();
+                Console.Write($"{DaUser.GLOBAL_SUPER_ADMIN} email address: ");
+                string email = Console.ReadLine();
+                Console.Write($"{DaUser.GLOBAL_SUPER_ADMIN} password: ");
+                string password = Console.ReadLine();
+                Console.Write("Enter the name of your first app: ");
+                var firstAppName = Console.ReadLine();
+
+                var cmdQueue = new Queue();
+                cmdQueue.Enqueue(new DaCreateSystemRolesCommand());
+                cmdQueue.Enqueue(new DaCreateGlobalSuperAdminUserCommand(email, password));
+                cmdQueue.Enqueue(new DaCreateAppCommand(firstAppName));
+                cmdQueue.Enqueue(new DaCreateDefaultListsCommand());
+                cmdQueue.Enqueue(new DaCreateSubscriptionPlansCommand());
+
+                IDaCommand cmd = null;
+                DaCommandResult cmdResult = null;
+
+                while(cmdQueue.Count > 0)
+                {
+                    cmd = cmdQueue.Dequeue() as IDaCommand;
+                    cmdResult = cmd.Execute();
+
+                    if (cmdResult.Messages != null && cmdResult.Messages.Count > 0)
+                    {
+                        foreach (var msg in cmdResult.Messages)
+                        {
+                            Console.WriteLine($"{msg.MessageType}: {msg.Message}");
+                        }
+                    }
+                }
 
                 Console.WriteLine("Press any key to exit...");
                 Console.ReadKey();

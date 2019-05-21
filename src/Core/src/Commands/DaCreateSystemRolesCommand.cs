@@ -14,12 +14,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejyle.DevAccelerate.Tools.Cli.Commands
+namespace Ejyle.DevAccelerate.Tools.Core.Commands
 {
-    public class DaCreateSystemRolesCommand : IDaConsoleCommand
+    public class DaCreateSystemRolesCommand : IDaCommand
     {
-        public void Execute()
+        public DaCommandResult Execute()
         {
+            bool success = false;
+            var messages = new List<DaCommandResultMessage>();
+
             string[] systemRoles = { DaRole.GLOBAL_SUPER_ADMIN, DaRole.TENANT_SUPER_ADMIN, DaRole.USER };
 
             var roleManager = new DaRoleManager(new DaRoleRepository(new DaIdentityDbContext()));
@@ -35,20 +38,26 @@ namespace Ejyle.DevAccelerate.Tools.Cli.Commands
                     role.Name = systemRole;
 
                     var result = DaAsyncHelper.RunSync<IdentityResult>(() => roleManager.CreateAsync(role));
+                    success = result.Succeeded;
 
                     if (result.Succeeded)
                     {
-                        Console.WriteLine($"Created the {systemRole} role.");
+                        messages.Add(new DaCommandResultMessage(DaCommandResultMessageType.Success, $"Created the {systemRole} role."));
                     }
                     else
                     {
                         if (result.Errors != null && result.Errors.Count() > 0)
                         {
-                            throw new Exception(result.Errors.FirstOrDefault());
+                            foreach(var err in result.Errors)
+                            {
+                                messages.Add(new DaCommandResultMessage(DaCommandResultMessageType.Error, err));
+                            }
                         }
                     }
                 }
             }
+
+            return new DaCommandResult(success, messages);
         }
     }
 }
