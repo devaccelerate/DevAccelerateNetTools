@@ -45,6 +45,7 @@ namespace Ejyle.DevAccelerate.Tools.Cli
                 var cmdQueue = new Queue();
                 cmdQueue.Enqueue(new DaCreateSystemRolesCommand());
                 cmdQueue.Enqueue(new DaCreateGlobalSuperAdminUserCommand(email, password));
+                cmdQueue.Enqueue(new DaCreateProfilesPlansCommand());
                 cmdQueue.Enqueue(new DaCreateAppCommand(firstAppName));
                 cmdQueue.Enqueue(new DaCreateDefaultListsCommand());
                 cmdQueue.Enqueue(new DaCreateSubscriptionPlansCommand());

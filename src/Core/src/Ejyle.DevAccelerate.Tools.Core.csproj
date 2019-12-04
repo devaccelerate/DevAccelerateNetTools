@@ -150,6 +150,7 @@
     <Compile Include="Commands\DaCreateAppCommand.cs" />
     <Compile Include="Commands\DaCreateDefaultListsCommand.cs" />
     <Compile Include="Commands\DaCreateGlobalSuperAdminUserCommand.cs" />
+    <Compile Include="Commands\DaCreateProfilesCommand.cs" />
     <Compile Include="Commands\DaCreateSubscriptionPlansCommand.cs" />
     <Compile Include="Commands\DaCreateSystemRolesCommand.cs" />
     <Compile Include="Commands\IDaCommand.cs" />
