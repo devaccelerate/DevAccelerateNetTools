@@ -84,10 +84,10 @@
       <HintPath>..\..\packages\DevAccelerateNotificationsEF.6.0.0-preview2\lib\Ejyle.DevAccelerate.Notifications.EF.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Profiles, Version=6.0.0.0, Culture=neutral, PublicKeyToken=704ea7d9f600d1b9, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DevAccelerateProfiles.6.0.0-preview1\lib\Ejyle.DevAccelerate.Profiles.dll</HintPath>
+      <HintPath>..\..\packages\DevAccelerateProfiles.6.0.0-preview2\lib\Ejyle.DevAccelerate.Profiles.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Profiles.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=3a5cc1b6ca60d324, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DevAccelerateProfilesEF.6.0.0-preview1\lib\Ejyle.DevAccelerate.Profiles.EF.dll</HintPath>
+      <HintPath>..\..\packages\DevAccelerateProfilesEF.6.0.0-preview2\lib\Ejyle.DevAccelerate.Profiles.EF.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
