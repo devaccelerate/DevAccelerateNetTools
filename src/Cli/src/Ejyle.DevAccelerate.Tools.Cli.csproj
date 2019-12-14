@@ -60,10 +60,10 @@
       <HintPath>..\..\packages\DevAccelerateCoreLoggingMsel.6.0.0-preview2\lib\Ejyle.DevAccelerate.Core.Logging.Msel.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.EnterpriseSecurity, Version=6.0.0.0, Culture=neutral, PublicKeyToken=aed0a3c186688a23, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DevAccelerateEnterpriseSecurity.6.0.0-preview1\lib\Ejyle.DevAccelerate.EnterpriseSecurity.dll</HintPath>
+      <HintPath>..\..\packages\DevAccelerateEnterpriseSecurity.6.0.0-preview2\lib\Ejyle.DevAccelerate.EnterpriseSecurity.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.EnterpriseSecurity.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=38de12056f194b9b, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DevAccelerateEnterpriseSecurityEF.6.0.0-preview1\lib\Ejyle.DevAccelerate.EnterpriseSecurity.EF.dll</HintPath>
+      <HintPath>..\..\packages\DevAccelerateEnterpriseSecurityEF.6.0.0-preview4\lib\Ejyle.DevAccelerate.EnterpriseSecurity.EF.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Identity, Version=6.0.0.0, Culture=neutral, PublicKeyToken=6e10ba72f5241b59, processorArchitecture=MSIL">
       <HintPath>..\..\packages\DevAccelerateIdentity.6.0.0-preview1\lib\Ejyle.DevAccelerate.Identity.dll</HintPath>
