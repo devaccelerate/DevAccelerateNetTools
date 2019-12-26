@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>DevAccelerateToolsCore</id>
-    <version>1.0.0-preview4</version>
+    <version>1.0.0-preview5</version>
     <title>DevAccelerate Tools Core</title>
     <authors>ejyle,tanveery</authors>
     <owners>ejyle,tanveery</owners>
@@ -12,17 +12,17 @@
     <iconUrl>https://raw.githubusercontent.com/devaccelerate/devaccelerate.github.io/master/img/logo.png</iconUrl>
     <description>A core library to support the DevAccelerate tools.</description>
     <summary>A core library to support the DevAccelerate tools.</summary>
-    <releaseNotes>Bug fixes</releaseNotes>
+    <releaseNotes>Updated NuGet packages.</releaseNotes>
     <copyright>© Ejyle Technologies (P) Ltd. All rights reserved.</copyright>
     <language>en-US</language>
     <tags>DevAccelerate, Tools</tags>
-    <repository type="git" url="https://github.com/devaccelerate/DevAccelerateNetTools" commit="ee2feec16a46b1f50d5889b8591b1297b54d3044" />
+    <repository type="git" url="https://github.com/devaccelerate/DevAccelerateNetTools" commit="2f7f15e30b2646813ee54ad3049c51b7f341e58b" />
     <dependencies>
-      <dependency id="DevAccelerateIdentityEF" version="6.0.0-preview2" />
-      <dependency id="DevAccelerateListsEF" version="6.0.0-preview2" />
-      <dependency id="DevAccelerateNotificationsEF" version="6.0.0-preview2" />
-      <dependency id="DevAccelerateProfilesEF" version="6.0.0-preview2" />
-      <dependency id="DevAccelerateEnterpriseSecurityEF" version="6.0.0-preview4" />
+      <dependency id="DevAccelerateIdentityEF" version="6.0.0-preview3" />
+      <dependency id="DevAccelerateListsEF" version="6.0.0-preview3" />
+      <dependency id="DevAccelerateNotificationsEF" version="6.0.0-preview3" />
+      <dependency id="DevAccelerateProfilesEF" version="6.0.0-preview3" />
+      <dependency id="DevAccelerateEnterpriseSecurityEF" version="6.0.0-preview5" />
     </dependencies>
   </metadata>
   <files>
