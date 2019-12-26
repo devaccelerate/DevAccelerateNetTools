@@ -48,7 +48,7 @@
       <HintPath>..\..\packages\DevAccelerateCore.6.0.0-preview4\lib\Ejyle.DevAccelerate.Core.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Core.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=c08ce881703cbf8d, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DevAccelerateCoreEF.6.0.0-preview2\lib\Ejyle.DevAccelerate.Core.EF.dll</HintPath>
+      <HintPath>..\..\packages\DevAccelerateCoreEF.6.0.0-preview3\lib\Ejyle.DevAccelerate.Core.EF.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Core.ExceptionHandling.Msel, Version=6.0.0.0, Culture=neutral, PublicKeyToken=85683cfaabc8a65b, processorArchitecture=MSIL">
       <HintPath>..\..\packages\DevAccelerateCoreExceptionHandlingMsel.6.0.0-preview2\lib\Ejyle.DevAccelerate.Core.ExceptionHandling.Msel.dll</HintPath>
@@ -57,34 +57,34 @@
       <HintPath>..\..\packages\DevAccelerateCoreLoggingMsel.6.0.0-preview2\lib\Ejyle.DevAccelerate.Core.Logging.Msel.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.EnterpriseSecurity, Version=6.0.0.0, Culture=neutral, PublicKeyToken=aed0a3c186688a23, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DevAccelerateEnterpriseSecurity.6.0.0-preview2\lib\Ejyle.DevAccelerate.EnterpriseSecurity.dll</HintPath>
+      <HintPath>..\..\packages\DevAccelerateEnterpriseSecurity.6.0.0-preview3\lib\Ejyle.DevAccelerate.EnterpriseSecurity.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.EnterpriseSecurity.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=38de12056f194b9b, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DevAccelerateEnterpriseSecurityEF.6.0.0-preview4\lib\Ejyle.DevAccelerate.EnterpriseSecurity.EF.dll</HintPath>
+      <HintPath>..\..\packages\DevAccelerateEnterpriseSecurityEF.6.0.0-preview5\lib\Ejyle.DevAccelerate.EnterpriseSecurity.EF.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Identity, Version=6.0.0.0, Culture=neutral, PublicKeyToken=6e10ba72f5241b59, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DevAccelerateIdentity.6.0.0-preview1\lib\Ejyle.DevAccelerate.Identity.dll</HintPath>
+      <HintPath>..\..\packages\DevAccelerateIdentity.6.0.0-preview2\lib\Ejyle.DevAccelerate.Identity.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Identity.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=fedcdf8886fdbd55, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DevAccelerateIdentityEF.6.0.0-preview2\lib\Ejyle.DevAccelerate.Identity.EF.dll</HintPath>
+      <HintPath>..\..\packages\DevAccelerateIdentityEF.6.0.0-preview3\lib\Ejyle.DevAccelerate.Identity.EF.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Lists, Version=6.0.0.0, Culture=neutral, PublicKeyToken=bb57f4f41314e69f, processorArchitecture=MSIL">
       <HintPath>..\..\packages\DevAccelerateNotifications.6.0.0-preview2\lib\Ejyle.DevAccelerate.Lists.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Lists.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=4e142f9f322347bc, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DevAccelerateListsEF.6.0.0-preview2\lib\Ejyle.DevAccelerate.Lists.EF.dll</HintPath>
+      <HintPath>..\..\packages\DevAccelerateListsEF.6.0.0-preview3\lib\Ejyle.DevAccelerate.Lists.EF.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Mail, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d7b88bc0f8757726, processorArchitecture=MSIL">
       <HintPath>..\..\packages\DevAccelerateMail.6.0.0-preview2\lib\Ejyle.DevAccelerate.Mail.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Notifications.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=4fc17cb15538643d, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DevAccelerateNotificationsEF.6.0.0-preview2\lib\Ejyle.DevAccelerate.Notifications.EF.dll</HintPath>
+      <HintPath>..\..\packages\DevAccelerateNotificationsEF.6.0.0-preview3\lib\Ejyle.DevAccelerate.Notifications.EF.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Profiles, Version=6.0.0.0, Culture=neutral, PublicKeyToken=704ea7d9f600d1b9, processorArchitecture=MSIL">
       <HintPath>..\..\packages\DevAccelerateProfiles.6.0.0-preview2\lib\Ejyle.DevAccelerate.Profiles.dll</HintPath>
     </Reference>
     <Reference Include="Ejyle.DevAccelerate.Profiles.EF, Version=6.0.0.0, Culture=neutral, PublicKeyToken=3a5cc1b6ca60d324, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DevAccelerateProfilesEF.6.0.0-preview2\lib\Ejyle.DevAccelerate.Profiles.EF.dll</HintPath>
+      <HintPath>..\..\packages\DevAccelerateProfilesEF.6.0.0-preview3\lib\Ejyle.DevAccelerate.Profiles.EF.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
