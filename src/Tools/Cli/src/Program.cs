@@ -49,6 +49,7 @@ namespace Ejyle.DevAccelerate.Tools.Cli
                 cmdQueue.Enqueue(new DaCreateAppCommand(firstAppName));
                 cmdQueue.Enqueue(new DaCreateDefaultListsCommand());
                 cmdQueue.Enqueue(new DaCreateSubscriptionPlansCommand());
+                cmdQueue.Enqueue(new DaCreateFinancialsPlansCommand());
 
                 IDaCommand cmd = null;
                 DaCommandResult cmdResult = null;
